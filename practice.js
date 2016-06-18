@@ -55,3 +55,61 @@ if ( answer.toUpperCase() === 'RUBY' ) {
  } else {
    document.write('<p>Sorry, the number was ' + randomNumber + '</p>');
  }
+
+
+ /*This program ask the user a series of questions while keeping
+ track of the number of answers submitted correctly, at the end of the
+program based on the number correct an award is given. */
+
+
+var correct = 0;
+var answer = prompt("What is 1 + 1?")
+if (answer === "2"){
+  correct += 1}
+
+var answer2 = prompt("how do you write something to the console in javascript?")
+if (answer2.toUpperCase()==="CONSOLE.LOG") {
+  correct += 1}
+
+var answer3 = prompt("What is the capital of new york?")
+if (answer3.toUpperCase()==='NEW YORK'){
+  correct += 1}
+
+var answer4 = prompt("What is 3 * 2?")
+if (answer4 === "6") {
+  correct += 1}
+
+var answer5 = prompt("What is futher away Mars or Pluto?")
+if (answer5.toUpperCase()==="PLUTO"){
+  correct += 1}
+
+document.write("<p>You got "+ correct + " out of 5 questions correct.</p>");
+
+if ( correct === 5 ) {
+  document.write("<p>you earned a gold crown</p>")
+} else if ( correct >= 3 ) {
+  document.write("<p>you earned a silver crown</p>")
+} else if ( correct >= 1 ) {
+  document.write("<p>you earned a bronze crown</p>")
+} else {
+  document.write("<p>No Crown For You!</p>")
+}
+
+
+
+// practicing functions
+
+function alertRandom() {
+   var randomNumber = Math.floor( Math.random() * 6 ) + 1;
+    alert(randomNumber);
+}
+alertRandom();
+
+
+// defining a variable as a function
+
+var alertRandom = function () {
+    var randomNumber = Math.floor(Math.random() * 6 ) + 1;
+    alert(randomNumber);
+};
+alertRandom();

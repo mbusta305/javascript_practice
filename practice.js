@@ -113,3 +113,15 @@ var alertRandom = function () {
     alert(randomNumber);
 };
 alertRandom();
+
+
+// declaring a function and using if statements
+
+function getRandomNumber ( lower, upper ) {
+  if ( isNaN(lower) || isNaN(upper) ) {
+    threw new Error ('Both Arguments must be Numbers');
+  }
+  return Math.floor(Math.random() * (upper - lower + 1)) + lower;
+}
+
+console.log( getRandomNumber(1, 100) );

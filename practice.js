@@ -125,3 +125,42 @@ function getRandomNumber ( lower, upper ) {
 }
 
 console.log( getRandomNumber(1, 100) );
+
+
+
+
+// checks if the email field of a form is empty
+
+function isEmailEmpty () {
+  var field = document.getElementById('email');
+ if (field.value === '') {
+   return true;
+ } else {
+     return flase;
+  }
+}
+
+var fieldTest = isEmailEmpty();
+if (fieldTest === true) {
+  alert('Please provide your email address.');
+}
+
+// creating a function that allows you to pass an argument
+// depending on what "argument"/ number you put in it will generate a random number between 1 and that number/argument
+function getRandomNumber( upper ) {
+  var randomNumber = Math.floor( Math.random() * upper ) + 1;
+  return randomNumber;
+}
+
+console.log( getRandomNumber(100) );
+
+
+
+
+// finds the area of a rectangle.... passing three arguments
+function getArea(width, length, unit) {
+  var area = width * length;
+  return area + " " + unit;
+}
+
+console.log(getArea(10, 20, 'sq ft'));
